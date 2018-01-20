@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Email </ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Senha </ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <button ion-button block (click)="login(user)">Entrar </button>
+  <button ion-button block color="light" (click)="register(user)">Registrar</button>
+  <!--<button ion-button block color="light"   (click)="goToAddItemPage()">Register</button>-->
+
+  <p ion-text color="danger">{{error}}</p>
+</ion-content>
